@@ -8,7 +8,9 @@ document
 
     const calculateAnswerNumber = document.querySelector("#calcAnswer");
 
-    if (mathOperator === "add") {
+    if (mathOperator === "avg") {
+      calculateAnswerNumber.innerHTML = (+number1 + +number2) / 2;
+    } else if (mathOperator === "add") {
       calculateAnswerNumber.innerHTML = +number1 + +number2;
     } else if (mathOperator === "subtract") {
       calculateAnswerNumber.innerHTML = +number1 - +number2;
