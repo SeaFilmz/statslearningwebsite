@@ -12,6 +12,8 @@ document
       calculateAnswerNumber.innerHTML = (+number1 + +number2) / 2;
     } else if (mathOperator === "max") {
       calculateAnswerNumber.innerHTML = Math.max(number1, number2);
+    } else if (mathOperator === "min") {
+      calculateAnswerNumber.innerHTML = Math.min(number1, number2);
     } else if (mathOperator === "add") {
       calculateAnswerNumber.innerHTML = +number1 + +number2;
     } else if (mathOperator === "subtract") {
