@@ -10,6 +10,8 @@ document
 
     if (mathOperator === "avg") {
       calculateAnswerNumber.innerHTML = (+number1 + +number2) / 2;
+    } else if (mathOperator) {
+      calculateAnswerNumber.innerHTML = Math.max(number1, number2);
     } else if (mathOperator === "add") {
       calculateAnswerNumber.innerHTML = +number1 + +number2;
     } else if (mathOperator === "subtract") {
