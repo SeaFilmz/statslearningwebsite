@@ -39,3 +39,17 @@ document
       maximumAnswer.innerHTML = "Wrong";
     }
   });
+
+document
+  .querySelector("#minButton")
+  .addEventListener("click", function practice2Problem() {
+    const minimumInput = document.querySelector("#minInput").value;
+
+    const minimumAnswer = document.querySelector("#minAnswer");
+
+    if (+minimumInput === 3) {
+      minimumAnswer.innerHTML = "Correct";
+    } else {
+      minimumAnswer.innerHTML = "Wrong";
+    }
+  });
