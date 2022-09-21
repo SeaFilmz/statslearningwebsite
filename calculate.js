@@ -53,3 +53,16 @@ document
       minimumAnswer.innerHTML = "Wrong";
     }
   });
+
+document
+  .querySelector("#avgButton")
+  .addEventListener("click", function practice3Problem() {
+    const averageInput = document.querySelector("#avgInput").value;
+    const averageAnswer = document.querySelector("#avgAnswer");
+
+    if (+averageInput === 6) {
+      averageAnswer.innerHTML = "Correct";
+    } else {
+      averageAnswer.innerHTML = "Wrong";
+    }
+  });
