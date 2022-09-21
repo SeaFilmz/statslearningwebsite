@@ -24,3 +24,18 @@ document
       calculateAnswerNumber.innerHTML = +number1 / +number2;
     }
   });
+
+document
+  .querySelector("#maxButton")
+  .addEventListener("click", function practice1Problem() {
+    const maximumInput = document.querySelector("#maxInput").value;
+
+    const maximumAnswer = document.querySelector("#maxAnswer");
+
+    console.log(maximumInput);
+    if (+maximumInput === 9) {
+      maximumAnswer.innerHTML = "Correct";
+    } else {
+      maximumAnswer.innerHTML = "Wrong";
+    }
+  });
