@@ -66,3 +66,16 @@ document
       averageAnswer.innerHTML = "Wrong";
     }
   });
+
+document
+  .querySelector("#medianButton")
+  .addEventListener("click", function practice4Problem() {
+    const medianInput = document.querySelector("#medianInput").value;
+    const medianAnswer = document.querySelector("#medianAnswer");
+
+    if (+medianInput === 6) {
+      medianAnswer.innerHTML = "Correct";
+    } else {
+      medianAnswer.innerHTML = "Wrong";
+    }
+  });
