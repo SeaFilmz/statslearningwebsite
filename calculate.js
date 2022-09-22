@@ -47,7 +47,7 @@ document
 
     const minimumAnswer = document.querySelector("#minAnswer");
 
-    if (+minimumInput === 3) {
+    if (+minimumInput === 2) {
       minimumAnswer.innerHTML = "Correct";
     } else {
       minimumAnswer.innerHTML = "Wrong";
@@ -60,7 +60,7 @@ document
     const averageInput = document.querySelector("#avgInput").value;
     const averageAnswer = document.querySelector("#avgAnswer");
 
-    if (+averageInput === 6) {
+    if (+averageInput === 5) {
       averageAnswer.innerHTML = "Correct";
     } else {
       averageAnswer.innerHTML = "Wrong";
@@ -73,7 +73,7 @@ document
     const medianInput = document.querySelector("#medianInput").value;
     const medianAnswer = document.querySelector("#medianAnswer");
 
-    if (+medianInput === 6) {
+    if (+medianInput === 4.5) {
       medianAnswer.innerHTML = "Correct";
     } else {
       medianAnswer.innerHTML = "Wrong";
