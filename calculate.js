@@ -51,6 +51,13 @@ buttonID("#minButton").addEventListener("click", function practice2Problem() {
   answerCheck(minimumInput, 2, minimumAnswer);
 });
 
+buttonID("#sumButton").addEventListener("click", function practiceSumProblem() {
+  const sumInput = document.querySelector("#sumInput").value;
+  const sumAnswer = document.querySelector("#sumAnswer");
+
+  answerCheck(sumInput, 20, sumAnswer);
+});
+
 buttonID("#avgButton").addEventListener("click", function practice3Problem() {
   const averageInput = document.querySelector("#avgInput").value;
   const averageAnswer = document.querySelector("#avgAnswer");
