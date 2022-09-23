@@ -25,33 +25,30 @@ document
     }
   });
 
+function answerCheck(input, number, answer) {
+  if (+input === number) {
+    answer.innerHTML = "Correct";
+  } else {
+    answer.innerHTML = "Wrong";
+  }
+}
+
 document
   .querySelector("#maxButton")
   .addEventListener("click", function practice1Problem() {
     const maximumInput = document.querySelector("#maxInput").value;
-
     const maximumAnswer = document.querySelector("#maxAnswer");
 
-    console.log(maximumInput);
-    if (+maximumInput === 9) {
-      maximumAnswer.innerHTML = "Correct";
-    } else {
-      maximumAnswer.innerHTML = "Wrong";
-    }
+    answerCheck(maximumInput, 9, maximumAnswer);
   });
 
 document
   .querySelector("#minButton")
   .addEventListener("click", function practice2Problem() {
     const minimumInput = document.querySelector("#minInput").value;
-
     const minimumAnswer = document.querySelector("#minAnswer");
 
-    if (+minimumInput === 2) {
-      minimumAnswer.innerHTML = "Correct";
-    } else {
-      minimumAnswer.innerHTML = "Wrong";
-    }
+    answerCheck(minimumInput, 2, minimumAnswer);
   });
 
 document
@@ -60,11 +57,7 @@ document
     const averageInput = document.querySelector("#avgInput").value;
     const averageAnswer = document.querySelector("#avgAnswer");
 
-    if (+averageInput === 5) {
-      averageAnswer.innerHTML = "Correct";
-    } else {
-      averageAnswer.innerHTML = "Wrong";
-    }
+    answerCheck(averageInput, 5, averageAnswer);
   });
 
 document
@@ -73,9 +66,5 @@ document
     const medianInput = document.querySelector("#medianInput").value;
     const medianAnswer = document.querySelector("#medianAnswer");
 
-    if (+medianInput === 4.5) {
-      medianAnswer.innerHTML = "Correct";
-    } else {
-      medianAnswer.innerHTML = "Wrong";
-    }
+    answerCheck(medianInput, 4.5, medianAnswer);
   });
