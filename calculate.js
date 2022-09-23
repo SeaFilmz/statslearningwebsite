@@ -25,6 +25,10 @@ document
     }
   });
 
+function buttonID(button) {
+  return document.querySelector(button);
+}
+
 function answerCheck(input, number, answer) {
   if (+input === number) {
     answer.innerHTML = "Correct";
@@ -33,38 +37,33 @@ function answerCheck(input, number, answer) {
   }
 }
 
-document
-  .querySelector("#maxButton")
-  .addEventListener("click", function practice1Problem() {
-    const maximumInput = document.querySelector("#maxInput").value;
-    const maximumAnswer = document.querySelector("#maxAnswer");
+buttonID("#maxButton").addEventListener("click", function practice1Problem() {
+  const maximumInput = document.querySelector("#maxInput").value;
+  const maximumAnswer = document.querySelector("#maxAnswer");
 
-    answerCheck(maximumInput, 9, maximumAnswer);
-  });
+  answerCheck(maximumInput, 9, maximumAnswer);
+});
 
-document
-  .querySelector("#minButton")
-  .addEventListener("click", function practice2Problem() {
-    const minimumInput = document.querySelector("#minInput").value;
-    const minimumAnswer = document.querySelector("#minAnswer");
+buttonID("#minButton").addEventListener("click", function practice2Problem() {
+  const minimumInput = document.querySelector("#minInput").value;
+  const minimumAnswer = document.querySelector("#minAnswer");
 
-    answerCheck(minimumInput, 2, minimumAnswer);
-  });
+  answerCheck(minimumInput, 2, minimumAnswer);
+});
 
-document
-  .querySelector("#avgButton")
-  .addEventListener("click", function practice3Problem() {
-    const averageInput = document.querySelector("#avgInput").value;
-    const averageAnswer = document.querySelector("#avgAnswer");
+buttonID("#avgButton").addEventListener("click", function practice3Problem() {
+  const averageInput = document.querySelector("#avgInput").value;
+  const averageAnswer = document.querySelector("#avgAnswer");
 
-    answerCheck(averageInput, 5, averageAnswer);
-  });
+  answerCheck(averageInput, 5, averageAnswer);
+});
 
-document
-  .querySelector("#medianButton")
-  .addEventListener("click", function practice4Problem() {
+buttonID("#medianButton").addEventListener(
+  "click",
+  function practice4Problem() {
     const medianInput = document.querySelector("#medianInput").value;
     const medianAnswer = document.querySelector("#medianAnswer");
 
     answerCheck(medianInput, 4.5, medianAnswer);
-  });
+  }
+);
