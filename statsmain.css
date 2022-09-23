@@ -5,7 +5,17 @@ html {
 }
 
 body {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.siteName {
+  font-size: 3.125rem;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .seriesOfNumbers {
