@@ -24,6 +24,16 @@ buttonID("#minButton").addEventListener("click", function practice2Problem() {
   answerCheck(minimumInput, 2, minimumAnswer);
 });
 
+buttonID("#rangeButton").addEventListener(
+  "click",
+  function practiceRangeProblem() {
+    const rangeInput = document.querySelector("#rangeInput").value;
+    const rangeAnswer = document.querySelector("#rangeAnswer");
+
+    answerCheck(rangeInput, 7, rangeAnswer);
+  }
+);
+
 buttonID("#sumButton").addEventListener("click", function practiceSumProblem() {
   const sumInput = document.querySelector("#sumInput").value;
   const sumAnswer = document.querySelector("#sumAnswer");
