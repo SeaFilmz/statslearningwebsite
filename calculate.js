@@ -10,14 +10,14 @@ function answerCheck(input, number, answer) {
   }
 }
 
-buttonID("#maxButton").addEventListener("click", function practice1Problem() {
+buttonID("#maxButton").addEventListener("click", function maxPracticeProblem() {
   const maximumInput = document.querySelector("#maxInput").value;
   const maximumAnswer = document.querySelector("#maxAnswer");
 
   answerCheck(maximumInput, 9, maximumAnswer);
 });
 
-buttonID("#minButton").addEventListener("click", function practice2Problem() {
+buttonID("#minButton").addEventListener("click", function minPracticeProblem() {
   const minimumInput = document.querySelector("#minInput").value;
   const minimumAnswer = document.querySelector("#minAnswer");
 
@@ -26,7 +26,7 @@ buttonID("#minButton").addEventListener("click", function practice2Problem() {
 
 buttonID("#rangeButton").addEventListener(
   "click",
-  function practiceRangeProblem() {
+  function rangePracticeProblem() {
     const rangeInput = document.querySelector("#rangeInput").value;
     const rangeAnswer = document.querySelector("#rangeAnswer");
 
@@ -34,14 +34,14 @@ buttonID("#rangeButton").addEventListener(
   }
 );
 
-buttonID("#sumButton").addEventListener("click", function practiceSumProblem() {
+buttonID("#sumButton").addEventListener("click", function sumPracticeProblem() {
   const sumInput = document.querySelector("#sumInput").value;
   const sumAnswer = document.querySelector("#sumAnswer");
 
   answerCheck(sumInput, 20, sumAnswer);
 });
 
-buttonID("#avgButton").addEventListener("click", function practice3Problem() {
+buttonID("#avgButton").addEventListener("click", function avgPracticeProblem() {
   const averageInput = document.querySelector("#avgInput").value;
   const averageAnswer = document.querySelector("#avgAnswer");
 
@@ -50,7 +50,7 @@ buttonID("#avgButton").addEventListener("click", function practice3Problem() {
 
 buttonID("#medianButton").addEventListener(
   "click",
-  function practice4Problem() {
+  function medianPracticeProblem() {
     const medianInput = document.querySelector("#medianInput").value;
     const medianAnswer = document.querySelector("#medianAnswer");
 
