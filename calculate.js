@@ -34,7 +34,7 @@ selector("#minButton").addEventListener("click", function minPracticeProblem() {
   );
 });
 
-buttonID("#rangeButton").addEventListener(
+selector("#rangeButton").addEventListener(
   "click",
   function rangePracticeProblem() {
     const rangeInput = selector("#rangeInput").value;
@@ -49,7 +49,7 @@ buttonID("#rangeButton").addEventListener(
   }
 );
 
-buttonID("#sumButton").addEventListener("click", function sumPracticeProblem() {
+selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
   const sumInput = selector("#sumInput").value;
   const sumAnswer = selector("#sumAnswer");
 
@@ -61,7 +61,7 @@ buttonID("#sumButton").addEventListener("click", function sumPracticeProblem() {
   );
 });
 
-buttonID("#avgButton").addEventListener("click", function avgPracticeProblem() {
+selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
   const averageInput = selector("#avgInput").value;
   const averageAnswer = selector("#avgAnswer");
 
@@ -73,7 +73,7 @@ buttonID("#avgButton").addEventListener("click", function avgPracticeProblem() {
   );
 });
 
-buttonID("#medianButton").addEventListener(
+selector("#medianButton").addEventListener(
   "click",
   function medianPracticeProblem() {
     const medianInput = selector("#medianInput").value;
