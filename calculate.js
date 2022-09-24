@@ -1,4 +1,4 @@
-function buttonID(button) {
+function selector(button) {
   return document.querySelector(button);
 }
 
@@ -10,9 +10,9 @@ function answerCheck(input, number, answer, hintHelp) {
   }
 }
 
-buttonID("#maxButton").addEventListener("click", function maxPracticeProblem() {
-  const maximumInput = document.querySelector("#maxInput").value;
-  const maximumAnswer = document.querySelector("#maxAnswer");
+selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
+  const maximumInput = selector("#maxInput").value;
+  const maximumAnswer = selector("#maxAnswer");
 
   answerCheck(
     maximumInput,
@@ -22,9 +22,9 @@ buttonID("#maxButton").addEventListener("click", function maxPracticeProblem() {
   );
 });
 
-buttonID("#minButton").addEventListener("click", function minPracticeProblem() {
-  const minimumInput = document.querySelector("#minInput").value;
-  const minimumAnswer = document.querySelector("#minAnswer");
+selector("#minButton").addEventListener("click", function minPracticeProblem() {
+  const minimumInput = selector("#minInput").value;
+  const minimumAnswer = selector("#minAnswer");
 
   answerCheck(
     minimumInput,
@@ -37,8 +37,8 @@ buttonID("#minButton").addEventListener("click", function minPracticeProblem() {
 buttonID("#rangeButton").addEventListener(
   "click",
   function rangePracticeProblem() {
-    const rangeInput = document.querySelector("#rangeInput").value;
-    const rangeAnswer = document.querySelector("#rangeAnswer");
+    const rangeInput = selector("#rangeInput").value;
+    const rangeAnswer = selector("#rangeAnswer");
 
     answerCheck(
       rangeInput,
@@ -50,8 +50,8 @@ buttonID("#rangeButton").addEventListener(
 );
 
 buttonID("#sumButton").addEventListener("click", function sumPracticeProblem() {
-  const sumInput = document.querySelector("#sumInput").value;
-  const sumAnswer = document.querySelector("#sumAnswer");
+  const sumInput = selector("#sumInput").value;
+  const sumAnswer = selector("#sumAnswer");
 
   answerCheck(
     sumInput,
@@ -62,8 +62,8 @@ buttonID("#sumButton").addEventListener("click", function sumPracticeProblem() {
 });
 
 buttonID("#avgButton").addEventListener("click", function avgPracticeProblem() {
-  const averageInput = document.querySelector("#avgInput").value;
-  const averageAnswer = document.querySelector("#avgAnswer");
+  const averageInput = selector("#avgInput").value;
+  const averageAnswer = selector("#avgAnswer");
 
   answerCheck(
     averageInput,
@@ -76,8 +76,8 @@ buttonID("#avgButton").addEventListener("click", function avgPracticeProblem() {
 buttonID("#medianButton").addEventListener(
   "click",
   function medianPracticeProblem() {
-    const medianInput = document.querySelector("#medianInput").value;
-    const medianAnswer = document.querySelector("#medianAnswer");
+    const medianInput = selector("#medianInput").value;
+    const medianAnswer = selector("#medianAnswer");
 
     answerCheck(
       medianInput,
