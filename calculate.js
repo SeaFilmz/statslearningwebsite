@@ -6,7 +6,10 @@ function answerCheck(input, number, answer, hintHelp) {
   if (+input === number) {
     answer.innerHTML = "Correct";
   } else {
-    answer.innerHTML = `<div>Wrong</div><div class="hintText">Hint: ${hintHelp}</div>`;
+    answer.innerHTML = `<div>Wrong</div><button id="hintButton">Hint</button>`;
+    selector("#hintButton").addEventListener("click", function maxHint() {
+      answer.innerHTML = `<div class="hintText">Hint: ${hintHelp}</div>`;
+    });
   }
 }
 
