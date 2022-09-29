@@ -9,6 +9,15 @@ function answerCheck(input, number, answer) {
     answer.innerHTML = `<div>Wrong</div>`;
   }
 }
+I;
+function displayHintText(docSelector, hintHelp) {
+  const confirmAction = confirm(
+    `If you choose to see the hint lose 1 point to overall score`
+  );
+  if (confirmAction) {
+    docSelector.innerHTML = `<div class="hintText">Hint: ${hintHelp}</div>`;
+  }
+}
 
 selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
   const maximumInput = selector("#maxInput").value;
@@ -18,14 +27,10 @@ selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
 });
 
 selector("#maxHintButton").addEventListener("click", function maxHint() {
-  const confirmAction = confirm(
-    `If you choose to see the hint lose 1 point to overall score`
+  displayHintText(
+    selector("#maxAnswer"),
+    "Maximum of a series of numbers is the largest number in that series"
   );
-  if (confirmAction) {
-    selector(
-      "#maxAnswer"
-    ).innerHTML = `<div class="hintText">Hint: Maximum of a series of numbers is the largest number in that series</div>`;
-  }
 });
 
 selector("#minButton").addEventListener("click", function minPracticeProblem() {
@@ -36,14 +41,10 @@ selector("#minButton").addEventListener("click", function minPracticeProblem() {
 });
 
 selector("#minHintButton").addEventListener("click", function maxHint() {
-  const confirmAction = confirm(
-    `If you choose to see the hint lose 1 point to overall score`
+  displayHintText(
+    selector("#minAnswer"),
+    "Minimum of a series of numbers is the smallest number in that series"
   );
-  if (confirmAction) {
-    selector(
-      "#minAnswer"
-    ).innerHTML = `<div class="hintText">Hint: Minimum of a series of numbers is the smallest number in that series</div>`;
-  }
 });
 
 selector("#rangeButton").addEventListener(
@@ -57,14 +58,10 @@ selector("#rangeButton").addEventListener(
 );
 
 selector("#rangeHintButton").addEventListener("click", function maxHint() {
-  const confirmAction = confirm(
-    `If you choose to see the hint lose 1 point to overall score`
+  displayHintText(
+    selector("#rangeAnswer"),
+    "Range is the maximum number minus the minimum number of a series of numbers"
   );
-  if (confirmAction) {
-    selector(
-      "#rangeAnswer"
-    ).innerHTML = `<div class="hintText">Hint: Range is the maximum number minus the minimum number of a series of numbers</div>`;
-  }
 });
 
 selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
@@ -75,14 +72,10 @@ selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
 });
 
 selector("#sumHintButton").addEventListener("click", function maxHint() {
-  const confirmAction = confirm(
-    `If you choose to see the hint lose 1 point to overall score`
+  displayHintText(
+    selector("#sumAnswer"),
+    "Sum is the total of every number in the series of numbers added together"
   );
-  if (confirmAction) {
-    selector(
-      "#sumAnswer"
-    ).innerHTML = `<div class="hintText">Hint: Sum is the total of every number in the series of numbers added together</div>`;
-  }
 });
 
 selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
@@ -93,14 +86,10 @@ selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
 });
 
 selector("#avgHintButton").addEventListener("click", function maxHint() {
-  const confirmAction = confirm(
-    `If you choose to see the hint lose 1 point to overall score`
+  displayHintText(
+    selector("#avgAnswer"),
+    "Average is the sum divided by the number of numbers in the series of numbers"
   );
-  if (confirmAction) {
-    selector(
-      "#avgAnswer"
-    ).innerHTML = `<div class="hintText">Hint: Average is the sum divided by the number of numbers in the series of numbers</div>`;
-  }
 });
 
 selector("#medianButton").addEventListener(
@@ -114,12 +103,8 @@ selector("#medianButton").addEventListener(
 );
 
 selector("#medianHintButton").addEventListener("click", function maxHint() {
-  const confirmAction = confirm(
-    `If you choose to see the hint lose 1 point to overall score`
+  displayHintText(
+    selector("#medianAnswer"),
+    "Median is the middle number of a series of numbers sorted from minimum to maximum. If series of numbers is even take the 2 most middle numbers, add them together and divide them by 2."
   );
-  if (confirmAction) {
-    selector(
-      "#medianAnswer"
-    ).innerHTML = `<div class="hintText">Hint: Median is the middle number of a series of numbers sorted from minimum to maximum. If series of numbers is even take the 2 most middle numbers, add them together and divide them by 2.</div>`;
-  }
 });
