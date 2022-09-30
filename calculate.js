@@ -4,7 +4,7 @@ function selector(button) {
 
 function answerCheck(input, number, answer) {
   if (+input === number) {
-    answer.innerHTML = "Correct";
+    answer.innerHTML = `<div>Correct</div><div>Score: 3</div>`;
   } else {
     answer.innerHTML = `<div>Wrong</div>`;
   }
