@@ -130,6 +130,8 @@ selector("#calculateScoreButton").addEventListener(
       +medInput === 4.5
     ) {
       totalScore.innerHTML = "Score: 12";
+    } else {
+      totalScore.innerHTML = "Score: -6";
     }
   }
 );
