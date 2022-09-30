@@ -2,9 +2,9 @@ function selector(button) {
   return document.querySelector(button);
 }
 
-function answerCheck(input, number, answer) {
+function answerCheck(input, number, answer, correctScore) {
   if (+input === number) {
-    answer.innerHTML = `<div>Correct</div><div>Score: 3</div>`;
+    answer.innerHTML = `<div>Correct</div><div>Score: ${correctScore}</div>`;
   } else {
     answer.innerHTML = `<div>Wrong</div><div>Score: -1</div>`;
   }
@@ -23,7 +23,7 @@ selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
   const maximumInput = selector("#maxInput").value;
   const maximumAnswer = selector("#maxAnswer");
 
-  answerCheck(maximumInput, 9, maximumAnswer);
+  answerCheck(maximumInput, 9, maximumAnswer, 2);
 });
 
 selector("#maxHintButton").addEventListener("click", function maxHint() {
@@ -37,7 +37,7 @@ selector("#minButton").addEventListener("click", function minPracticeProblem() {
   const minimumInput = selector("#minInput").value;
   const minimumAnswer = selector("#minAnswer");
 
-  answerCheck(minimumInput, 2, minimumAnswer);
+  answerCheck(minimumInput, 2, minimumAnswer, 2);
 });
 
 selector("#minHintButton").addEventListener("click", function maxHint() {
@@ -53,7 +53,7 @@ selector("#rangeButton").addEventListener(
     const rangeInput = selector("#rangeInput").value;
     const rangeAnswer = selector("#rangeAnswer");
 
-    answerCheck(rangeInput, 7, rangeAnswer);
+    answerCheck(rangeInput, 7, rangeAnswer, 2);
   }
 );
 
@@ -68,7 +68,7 @@ selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
   const sumInput = selector("#sumInput").value;
   const sumAnswer = selector("#sumAnswer");
 
-  answerCheck(sumInput, 20, sumAnswer);
+  answerCheck(sumInput, 20, sumAnswer, 2);
 });
 
 selector("#sumHintButton").addEventListener("click", function maxHint() {
@@ -82,7 +82,7 @@ selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
   const averageInput = selector("#avgInput").value;
   const averageAnswer = selector("#avgAnswer");
 
-  answerCheck(averageInput, 5, averageAnswer);
+  answerCheck(averageInput, 5, averageAnswer, 2);
 });
 
 selector("#avgHintButton").addEventListener("click", function maxHint() {
@@ -98,7 +98,7 @@ selector("#medianButton").addEventListener(
     const medianInput = selector("#medianInput").value;
     const medianAnswer = selector("#medianAnswer");
 
-    answerCheck(medianInput, 4.5, medianAnswer);
+    answerCheck(medianInput, 4.5, medianAnswer, 2);
   }
 );
 
