@@ -9,7 +9,7 @@ function answerCheck(input, number, answer) {
     answer.innerHTML = `<div>Wrong</div>`;
   }
 }
-I;
+
 function displayHintText(docSelector, hintHelp) {
   const confirmAction = confirm(
     `If you choose to see the hint lose 1 point to overall score`
