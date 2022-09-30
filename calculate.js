@@ -6,7 +6,7 @@ function answerCheck(input, number, answer) {
   if (+input === number) {
     answer.innerHTML = `<div>Correct</div><div>Score: 3</div>`;
   } else {
-    answer.innerHTML = `<div>Wrong</div>`;
+    answer.innerHTML = `<div>Wrong</div><div>Score: -1</div>`;
   }
 }
 
