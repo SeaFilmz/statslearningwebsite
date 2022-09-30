@@ -108,3 +108,28 @@ selector("#medianHintButton").addEventListener("click", function maxHint() {
     "Median is the middle number of a series of numbers sorted from minimum to maximum. If series of numbers is even take the 2 most middle numbers, add them together and divide them by 2."
   );
 });
+
+selector("#calculateScoreButton").addEventListener(
+  "click",
+  function calculateScore() {
+    const maxInput = selector("#maxInput").value;
+    const minInput = selector("#minInput").value;
+    const rangeInput = selector("#rangeInput").value;
+    const sumInput = selector("#sumInput").value;
+    const avgInput = selector("#avgInput").value;
+    const medInput = selector("#medianInput").value;
+
+    const totalScore = selector("#score");
+
+    if (
+      +maxInput === 9 &&
+      +minInput === 2 &&
+      +rangeInput === 7 &&
+      +sumInput === 20 &&
+      +avgInput === 5 &&
+      +medInput === 4.5
+    ) {
+      totalScore.innerHTML = "Score: 12";
+    }
+  }
+);
