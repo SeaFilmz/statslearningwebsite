@@ -130,6 +130,8 @@ selector("#calculateScoreButton").addEventListener(
       +medInput === 4.5
     ) {
       totalScore.innerHTML = "Score: 12";
+    } else if (+maxInput === 9) {
+      totalScore.innerHTML = "Score: -3";
     } else {
       totalScore.innerHTML = "Score: -6";
     }
