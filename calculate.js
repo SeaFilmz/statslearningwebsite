@@ -125,6 +125,8 @@ selector("#calculateScoreButton").addEventListener(
       totalScore.innerHTML = "Score: 12";
     } else if (+maximumInputEl.value === 9) {
       totalScore.innerHTML = "Score: -3";
+    } else if (+minimumInputEl.value === 2) {
+      totalScore.innerHTML = "Score: -3";
     } else {
       totalScore.innerHTML = "Score: -6";
     }
