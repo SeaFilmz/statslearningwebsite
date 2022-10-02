@@ -112,7 +112,9 @@ selector("#medianHintButton").addEventListener("click", function maxHint() {
 selector("#calculateScoreButton").addEventListener(
   "click",
   function calculateScore() {
-    const totalScore = selector("#score");
+    const totalScoreEl = selector("#score");
+
+    let totalScore = 0;
 
     if (
       +maximumInputEl.value === 9 &&
@@ -122,13 +124,13 @@ selector("#calculateScoreButton").addEventListener(
       +averageInputEl.value === 5 &&
       +medianInputEl.value === 4.5
     ) {
-      totalScore.innerHTML = "Score: 12";
+      totalScoreEl.innerHTML = "Score: 12";
     } else if (+maximumInputEl.value === 9) {
-      totalScore.innerHTML = "Score: -3";
+      totalScoreEl.innerHTML = "Score: -3";
     } else if (+minimumInputEl.value === 2) {
-      totalScore.innerHTML = "Score: -3";
+      totalScoreEl.innerHTML = "Score: -3";
     } else {
-      totalScore.innerHTML = "Score: -6";
+      totalScoreEl.innerHTML = `Score: ${totalScore}`;
     }
   }
 );
