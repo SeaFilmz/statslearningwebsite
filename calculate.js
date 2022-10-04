@@ -127,6 +127,15 @@ selector("#calculateScoreButton").addEventListener(
       +medianInputEl.value === 4.5
     ) {
       totalScoreEl.innerHTML = "Score: 12";
+    } else if (
+      +maximumInputEl.value !== 9 &&
+      +minimumInputEl.value !== 2 &&
+      +rangeInputEl.value !== 7 &&
+      +sumInputEl.value !== 20 &&
+      +averageInputEl.value !== 5 &&
+      +medianInputEl.value !== 4.5
+    ) {
+      totalScoreEl.innerHTML = "Score: -6";
     } else if (+maximumInputEl.value === 9) {
       totalScoreEl.innerHTML = "Score: -3";
     } else if (+minimumInputEl.value === 2) {
