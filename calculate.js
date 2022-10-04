@@ -132,7 +132,7 @@ selector("#calculateScoreButton").addEventListener(
     } else if (+minimumInputEl.value === 2) {
       totalScoreEl.innerHTML = "Score: -3";
     } else {
-      totalScoreEl.innerHTML = `Score: ${totalScore}`;
+      totalScoreEl.innerHTML = `Please Answer All Problems`;
     }
   }
 );
