@@ -151,6 +151,8 @@ selector("#calculateScoreButton").addEventListener(
       totalScoreEl.innerHTML = "Score: -3";
     } else if (+rangeInputEl.value === 7) {
       totalScoreEl.innerHTML = "Score: -3";
+    } else if (+sumInputEl.value === 20) {
+      totalScoreEl.innerHTML = "Score: -3";
     }
   }
 );
