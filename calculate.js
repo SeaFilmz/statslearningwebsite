@@ -126,7 +126,7 @@ selector("#calculateScoreButton").addEventListener(
       +averageInputEl.value === 5 &&
       +medianInputEl.value === 4.5
     ) {
-      totalScoreEl.innerHTML = "Score: 12";
+      totalScore = 12;
     } else if (
       +maximumInputEl.value === +"" ||
       +minimumInputEl.value === +"" ||
@@ -135,7 +135,7 @@ selector("#calculateScoreButton").addEventListener(
       +averageInputEl.value === +"" ||
       +medianInputEl.value === +""
     ) {
-      totalScoreEl.innerHTML = `Please Answer All Problems`;
+      return (totalScoreEl.innerHTML = `Please Answer All Problems`);
     } else if (
       +maximumInputEl.value !== 9 &&
       +minimumInputEl.value !== 2 &&
@@ -144,19 +144,20 @@ selector("#calculateScoreButton").addEventListener(
       +averageInputEl.value !== 5 &&
       +medianInputEl.value !== 4.5
     ) {
-      totalScoreEl.innerHTML = "Score: -6";
+      totalScore = -6;
     } else if (+maximumInputEl.value === 9) {
-      totalScoreEl.innerHTML = "Score: -3";
+      totalScore = -3;
     } else if (+minimumInputEl.value === 2) {
-      totalScoreEl.innerHTML = "Score: -3";
+      totalScore = -3;
     } else if (+rangeInputEl.value === 7) {
-      totalScoreEl.innerHTML = "Score: -3";
+      totalScore = -3;
     } else if (+sumInputEl.value === 20) {
-      totalScoreEl.innerHTML = "Score: -3";
+      totalScore = -3;
     } else if (+averageInputEl.value === 5) {
-      totalScoreEl.innerHTML = "Score: -3";
+      totalScore = -3;
     } else if (+medianInputEl.value === 4.5) {
-      totalScoreEl.innerHTML = "Score: -3";
+      totalScore = -3;
     }
+    return (totalScoreEl.innerHTML = `Score: ${totalScore}`);
   }
 );
