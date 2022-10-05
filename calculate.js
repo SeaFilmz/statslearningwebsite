@@ -147,17 +147,14 @@ selector("#calculateScoreButton").addEventListener(
       totalScore = -6;
     } else if (+maximumInputEl.value === 9 && +minimumInputEl.value === 2) {
       totalScore;
-    } else if (+maximumInputEl.value === 9) {
-      totalScore = -3;
-    } else if (+minimumInputEl.value === 2) {
-      totalScore = -3;
-    } else if (+rangeInputEl.value === 7) {
-      totalScore = -3;
-    } else if (+sumInputEl.value === 20) {
-      totalScore = -3;
-    } else if (+averageInputEl.value === 5) {
-      totalScore = -3;
-    } else if (+medianInputEl.value === 4.5) {
+    } else if (
+      +maximumInputEl.value === 9 ||
+      +minimumInputEl.value === 2 ||
+      +rangeInputEl.value === 7 ||
+      +sumInputEl.value === 20 ||
+      +averageInputEl.value === 5 ||
+      +medianInputEl.value === 4.5
+    ) {
       totalScore = -3;
     }
     return (totalScoreEl.innerHTML = `Score: ${totalScore}`);
