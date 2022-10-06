@@ -147,7 +147,8 @@ selector("#calculateScoreButton").addEventListener(
       totalScore = -6;
     } else if (
       (+maximumInputEl.value === 9 && +minimumInputEl.value === 2) ||
-      (+maximumInputEl.value === 9 && +rangeInputEl.value === 7)
+      (+maximumInputEl.value === 9 && +rangeInputEl.value === 7) ||
+      (+maximumInputEl.value === 9 && +sumInputEl.value === 20)
     ) {
       totalScore;
     } else if (
