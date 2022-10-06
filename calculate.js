@@ -145,7 +145,10 @@ selector("#calculateScoreButton").addEventListener(
       +medianInputEl.value !== 4.5
     ) {
       totalScore = -6;
-    } else if (+maximumInputEl.value === 9 && +minimumInputEl.value === 2) {
+    } else if (
+      (+maximumInputEl.value === 9 && +minimumInputEl.value === 2) ||
+      (+maximumInputEl.value === 9 && +rangeInputEl.value === 7)
+    ) {
       totalScore;
     } else if (
       +maximumInputEl.value === 9 ||
