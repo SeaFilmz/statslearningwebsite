@@ -146,12 +146,17 @@ selector("#calculateScoreButton").addEventListener(
     ) {
       totalScore = -6;
     } else if (
-      +maximumInputEl.value === 9 &&
-      (+minimumInputEl.value === 2 ||
-        +rangeInputEl.value === 7 ||
-        +sumInputEl.value === 20 ||
-        +averageInputEl.value === 5 ||
-        +medianInputEl.value === 4.5)
+      (+maximumInputEl.value === 9 &&
+        (+minimumInputEl.value === 2 ||
+          +rangeInputEl.value === 7 ||
+          +sumInputEl.value === 20 ||
+          +averageInputEl.value === 5 ||
+          +medianInputEl.value === 4.5)) ||
+      (+minimumInputEl.value === 2 &&
+        (+rangeInputEl.value === 7 ||
+          +sumInputEl.value === 20 ||
+          +averageInputEl.value === 5 ||
+          +medianInputEl.value === 4.5))
     ) {
       totalScore;
     } else if (
