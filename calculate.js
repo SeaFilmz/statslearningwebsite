@@ -121,15 +121,6 @@ selector("#calculateScoreButton").addEventListener(
   "click",
   function calculateScore() {
     if (
-      +maximumInputEl.value === 9 &&
-      +minimumInputEl.value === 2 &&
-      +rangeInputEl.value === 7 &&
-      +sumInputEl.value === 20 &&
-      +averageInputEl.value === 5 &&
-      +medianInputEl.value === 4.5
-    ) {
-      totalScore = 12;
-    } else if (
       +maximumInputEl.value === +"" ||
       +minimumInputEl.value === +"" ||
       +rangeInputEl.value === +"" ||
@@ -138,15 +129,6 @@ selector("#calculateScoreButton").addEventListener(
       +medianInputEl.value === +""
     ) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
-    } else if (
-      +maximumInputEl.value !== 9 &&
-      +minimumInputEl.value !== 2 &&
-      +rangeInputEl.value !== 7 &&
-      +sumInputEl.value !== 20 &&
-      +averageInputEl.value !== 5 &&
-      +medianInputEl.value !== 4.5
-    ) {
-      totalScore = -6;
     } else if (
       (+maximumInputEl.value === 9 &&
         (+minimumInputEl.value === 2 ||
