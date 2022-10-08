@@ -16,7 +16,6 @@ function answerCheck(input, number, answer, correctScore, wrongScore) {
     answer.innerHTML = `<div>Wrong</div><div>Score: ${wrongScore}</div>`;
     totalScore = totalScore - 1;
   }
-  return (totalScoreEl.innerHTML = `Score: ${totalScore}`);
 }
 
 function displayHintText(docSelector, hintHelp) {
