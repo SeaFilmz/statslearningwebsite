@@ -162,7 +162,8 @@ selector("#calculateScoreButton").addEventListener(
           +averageInputEl.value === 5 ||
           +medianInputEl.value === 4.5)) ||
       (+sumInputEl.value === 20 &&
-        (+averageInputEl.value === 5 || +medianInputEl.value === 4.5))
+        (+averageInputEl.value === 5 || +medianInputEl.value === 4.5)) ||
+      (+averageInputEl.value === 5 && +medianInputEl.value === 4.5)
     ) {
       totalScore;
     } else if (
