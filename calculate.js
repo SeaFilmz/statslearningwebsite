@@ -2,14 +2,20 @@ function selector(button) {
   return document.querySelector(button);
 }
 
+const totalScoreEl = selector("#score");
+
+let totalScore = 0;
+
 function answerCheck(input, number, answer, correctScore, wrongScore) {
   if (+input === number) {
     answer.innerHTML = `<div>Correct</div><div>Score: ${correctScore}</div>`;
+    totalScore = totalScore + 2;
   } else if (+input === +"") {
     answer.innerHTML = `<div>Please Answer Problem</div>`;
   } else {
     answer.innerHTML = `<div>Wrong</div><div>Score: ${wrongScore}</div>`;
   }
+  return (totalScoreEl.innerHTML = `Score: ${totalScore}`);
 }
 
 function displayHintText(docSelector, hintHelp) {
@@ -114,10 +120,6 @@ selector("#medianHintButton").addEventListener("click", function maxHint() {
 selector("#calculateScoreButton").addEventListener(
   "click",
   function calculateScore() {
-    const totalScoreEl = selector("#score");
-
-    let totalScore = 0;
-
     if (
       +maximumInputEl.value === 9 &&
       +minimumInputEl.value === 2 &&
