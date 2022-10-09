@@ -24,6 +24,7 @@ function displayHintText(docSelector, hintHelp) {
   );
   if (confirmAction) {
     docSelector.innerHTML = `<div class="hintText">Hint: ${hintHelp}</div>`;
+    totalScore = totalScore - 1;
   }
 }
 
