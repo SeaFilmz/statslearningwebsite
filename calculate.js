@@ -129,27 +129,6 @@ selector("#calculateScoreButton").addEventListener(
       +medianInputEl.value === +""
     ) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
-    } else if (
-      (+maximumInputEl.value === 9 &&
-        (+minimumInputEl.value === 2 ||
-          +rangeInputEl.value === 7 ||
-          +sumInputEl.value === 20 ||
-          +averageInputEl.value === 5 ||
-          +medianInputEl.value === 4.5)) ||
-      (+minimumInputEl.value === 2 &&
-        (+rangeInputEl.value === 7 ||
-          +sumInputEl.value === 20 ||
-          +averageInputEl.value === 5 ||
-          +medianInputEl.value === 4.5)) ||
-      (+rangeInputEl.value === 7 &&
-        (+sumInputEl.value === 20 ||
-          +averageInputEl.value === 5 ||
-          +medianInputEl.value === 4.5)) ||
-      (+sumInputEl.value === 20 &&
-        (+averageInputEl.value === 5 || +medianInputEl.value === 4.5)) ||
-      (+averageInputEl.value === 5 && +medianInputEl.value === 4.5)
-    ) {
-      totalScore;
     }
     return (totalScoreEl.innerHTML = `Score: ${totalScore}`);
   }
