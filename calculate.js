@@ -130,7 +130,10 @@ selector("#calculateScoreButton").addEventListener(
       +medianInputEl.value === +""
     ) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
+    } else if (totalScore > 0) {
+      return (totalScoreEl.innerHTML = `You Pased! Score: ${totalScore}`);
+    } else {
+      return (totalScoreEl.innerHTML = `<div>You Failed! Score: ${totalScore}</div>`);
     }
-    return (totalScoreEl.innerHTML = `Score: ${totalScore}`);
   }
 );
