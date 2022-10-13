@@ -133,11 +133,10 @@ selector("#calculateScoreButton").addEventListener(
     } else if (totalScore > 12) {
       return (totalScoreEl.innerHTML = `You Pased! Score: 12`);
     } else if (totalScore < -12) {
-      return (totalScoreEl.innerHTML = `You Failed! Score: -12`);
+      totalScore = -12;
     } else if (12 >= totalScore > 0) {
       return (totalScoreEl.innerHTML = `You Pased! Score: ${totalScore}`);
-    } else if (0 >= totalScore >= -12) {
-      return (totalScoreEl.innerHTML = `You Failed! Score: ${totalScore}`);
     }
+    return (totalScoreEl.innerHTML = `You Failed! Score: ${totalScore}`);
   }
 );
