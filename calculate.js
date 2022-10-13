@@ -1,5 +1,69 @@
-function selector(button) {
-  return document.querySelector(button);
+/**
+ * @param {string} selector
+ * @returns {HTMLElement}
+ */
+function selector(selector) {
+  return document.querySelector(selector);
+}
+
+/***************************** LOGIC *****************************/
+
+const questions = [
+  {
+    id: "max",
+    label: "Maximum",
+    type: "number",
+    hint: "Maximum of a series of numbers is the largest number in that series",
+  },
+];
+
+// TODO: write functions here that work without using any html elments
+
+/***************************** DISPLAY ****************************/
+
+/**
+ * Empty container to hold all questions that will be generated.
+ */
+const questionsDisplay = selector("#questions");
+
+// Create HTML for each question in array
+for (const question of questions) {
+  // create elements 'in memory'
+  const element = document.createElement("div");
+  element.className = "question";
+
+  // Construct everything else that goes in a question container
+  element.innerHTML = `
+    <label for="${question.id}-input">${question.label}:<label/>
+    <input type="${question.type}" id="${question.id}-input" class="inputField">
+    <button id="${question.id}-answer-button">Answer</button>
+    <button id="${question.id}-hint" class="hintButton">Hint</button>
+    <p id="${question.id}-answer-display"></p>
+  `;
+
+  // attach listener only to parent element.
+  element.addEventListener("click", (event) => {
+    console.log(`[${event.target.id}] was clicked!`);
+
+    // filter operations based on the target of the click.
+    if (event.target.id === `${question.id}-answer-button`) {
+      answerCheck(
+        selector(`#${question.id}-input`).value,
+        9,
+        selector(`#${question.id}-answer-display`),
+        2,
+        -1
+      );
+    } else if (event.target.id === `${question.id}-hint`) {
+      displayHintText(
+        selector(`#${question.id}-answer-display`),
+        question.hint
+      );
+    }
+  });
+
+  // adds the element to the DOM
+  questionsDisplay.appendChild(element);
 }
 
 const totalScoreEl = selector("#score");
@@ -45,17 +109,6 @@ const averageAnswer = selector("#avgAnswer");
 
 const medianInputEl = selector("#medianInput");
 const medianAnswer = selector("#medianAnswer");
-
-selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
-  answerCheck(maximumInputEl.value, 9, maximumAnswer, 2, -1);
-});
-
-selector("#maxHintButton").addEventListener("click", function maxHint() {
-  displayHintText(
-    maximumAnswer,
-    "Maximum of a series of numbers is the largest number in that series"
-  );
-});
 
 selector("#minButton").addEventListener("click", function minPracticeProblem() {
   answerCheck(minimumInputEl.value, 2, minimumAnswer, 2, -1);
