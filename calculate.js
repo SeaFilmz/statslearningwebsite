@@ -10,11 +10,13 @@ function answerCheck(input, number, answer, correctScore, wrongScore) {
   if (+input === number) {
     answer.innerHTML = `<div>Correct</div><div>Score: ${correctScore}</div>`;
     totalScore = totalScore + 2;
+    console.log(`input === number`, totalScore);
   } else if (+input === +"") {
     answer.innerHTML = `<div>Please Answer Problem</div>`;
   } else {
     answer.innerHTML = `<div>Wrong</div><div>Score: ${wrongScore}</div>`;
     totalScore = totalScore - 1;
+    console.log(`else`, totalScore);
   }
 }
 
@@ -25,6 +27,7 @@ function displayHintText(docSelector, hintHelp) {
   if (confirmAction) {
     docSelector.innerHTML = `<div class="hintText">Hint: ${hintHelp}</div>`;
     totalScore = totalScore - 1;
+    console.log(`confirmAction`, totalScore);
   }
 }
 
