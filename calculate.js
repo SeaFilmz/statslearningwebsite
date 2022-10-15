@@ -64,7 +64,7 @@ selector("#minButton").addEventListener("click", function minPracticeProblem() {
   answerCheck(minimumInputEl.value, 2, minimumAnswer, 2, -1);
 });
 
-selector("#minHintButton").addEventListener("click", function maxHint() {
+selector("#minHintButton").addEventListener("click", function minHint() {
   displayHintText(
     minimumAnswer,
     "Minimum of a series of numbers is the smallest number in that series"
@@ -78,7 +78,7 @@ selector("#rangeButton").addEventListener(
   }
 );
 
-selector("#rangeHintButton").addEventListener("click", function maxHint() {
+selector("#rangeHintButton").addEventListener("click", function rangeHint() {
   displayHintText(
     rangeAnswer,
     "Range is the maximum number minus the minimum number of a series of numbers"
@@ -89,7 +89,7 @@ selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
   answerCheck(sumInputEl.value, 20, sumAnswer, 2, -1);
 });
 
-selector("#sumHintButton").addEventListener("click", function maxHint() {
+selector("#sumHintButton").addEventListener("click", function sumHint() {
   displayHintText(
     sumAnswer,
     "Sum is the total of every number in the series of numbers added together"
@@ -100,7 +100,7 @@ selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
   answerCheck(averageInputEl.value, 5, averageAnswer, 2, -1);
 });
 
-selector("#avgHintButton").addEventListener("click", function maxHint() {
+selector("#avgHintButton").addEventListener("click", function avgHint() {
   displayHintText(
     avgAnswer,
     "Average is the sum divided by the number of numbers in the series of numbers"
@@ -114,7 +114,7 @@ selector("#medianButton").addEventListener(
   }
 );
 
-selector("#medianHintButton").addEventListener("click", function maxHint() {
+selector("#medianHintButton").addEventListener("click", function medianHint() {
   displayHintText(
     medianAnswer,
     "Median is the middle number of a series of numbers sorted from minimum to maximum. If series of numbers is even take the 2 most middle numbers, add them together and divide them by 2."
