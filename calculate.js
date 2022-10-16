@@ -34,7 +34,7 @@ function displayHintText(docSelector, hintHelp) {
 const inputField = [
   selector("#maxInput"),
   selector("#minInput"),
-  selector("#rangInput"),
+  selector("#rangeInput"),
   selector("#sumInput"),
   selector("#avgInput"),
   selector("#medianInput"),
@@ -122,14 +122,7 @@ selector("#medianHintButton").addEventListener("click", function medianHint() {
 selector("#calculateScoreButton").addEventListener(
   "click",
   function calculateScore() {
-    if (
-      +inputField[0].value === +"" ||
-      +inputField[1].value === +"" ||
-      +inputField[2].value === +"" ||
-      +inputField[3].value === +"" ||
-      +inputField[4].value === +"" ||
-      +inputField[5].value === +""
-    ) {
+    if (inputField.some((input) => +input.value === +"")) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
     } else if (totalScore > 12) {
       totalScore = 12;
