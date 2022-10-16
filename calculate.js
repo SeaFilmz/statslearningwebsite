@@ -31,26 +31,24 @@ function displayHintText(docSelector, hintHelp) {
   }
 }
 
-const maximumInputEl = selector("#maxInput");
+const inputField = [
+  selector("#maxInput"),
+  selector("#minInput"),
+  selector("#rangInput"),
+  selector("#sumInput"),
+  selector("#avgInput"),
+  selector("#medianInput"),
+];
+
 const maximumAnswer = selector("#maxAnswer");
-
-const minimumInputEl = selector("#minInput");
 const minimumAnswer = selector("#minAnswer");
-
-const rangeInputEl = selector("#rangeInput");
 const rangeAnswer = selector("#rangeAnswer");
-
-const sumInputEl = selector("#sumInput");
 const sumAnswer = selector("#sumAnswer");
-
-const averageInputEl = selector("#avgInput");
 const averageAnswer = selector("#avgAnswer");
-
-const medianInputEl = selector("#medianInput");
 const medianAnswer = selector("#medianAnswer");
 
 selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
-  answerCheck(maximumInputEl.value, 9, maximumAnswer, 2, -1);
+  answerCheck(inputField[0].value, 9, maximumAnswer, 2, -1);
 });
 
 selector("#maxHintButton").addEventListener("click", function maxHint() {
@@ -61,7 +59,7 @@ selector("#maxHintButton").addEventListener("click", function maxHint() {
 });
 
 selector("#minButton").addEventListener("click", function minPracticeProblem() {
-  answerCheck(minimumInputEl.value, 2, minimumAnswer, 2, -1);
+  answerCheck(inputField[1].value, 2, minimumAnswer, 2, -1);
 });
 
 selector("#minHintButton").addEventListener("click", function minHint() {
@@ -74,7 +72,7 @@ selector("#minHintButton").addEventListener("click", function minHint() {
 selector("#rangeButton").addEventListener(
   "click",
   function rangePracticeProblem() {
-    answerCheck(rangeInputEl.value, 7, rangeAnswer, 2, -1);
+    answerCheck(inputField[2].value, 7, rangeAnswer, 2, -1);
   }
 );
 
@@ -86,7 +84,7 @@ selector("#rangeHintButton").addEventListener("click", function rangeHint() {
 });
 
 selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
-  answerCheck(sumInputEl.value, 20, sumAnswer, 2, -1);
+  answerCheck(inputField[3].value, 20, sumAnswer, 2, -1);
 });
 
 selector("#sumHintButton").addEventListener("click", function sumHint() {
@@ -97,7 +95,7 @@ selector("#sumHintButton").addEventListener("click", function sumHint() {
 });
 
 selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
-  answerCheck(averageInputEl.value, 5, averageAnswer, 2, -1);
+  answerCheck(inputField[4].value, 5, averageAnswer, 2, -1);
 });
 
 selector("#avgHintButton").addEventListener("click", function avgHint() {
@@ -110,7 +108,7 @@ selector("#avgHintButton").addEventListener("click", function avgHint() {
 selector("#medianButton").addEventListener(
   "click",
   function medianPracticeProblem() {
-    answerCheck(medianInputEl.value, 4.5, medianAnswer, 2, -1);
+    answerCheck(inputField[5].value, 4.5, medianAnswer, 2, -1);
   }
 );
 
@@ -125,12 +123,12 @@ selector("#calculateScoreButton").addEventListener(
   "click",
   function calculateScore() {
     if (
-      +maximumInputEl.value === +"" ||
-      +minimumInputEl.value === +"" ||
-      +rangeInputEl.value === +"" ||
-      +sumInputEl.value === +"" ||
-      +averageInputEl.value === +"" ||
-      +medianInputEl.value === +""
+      +inputField[0].value === +"" ||
+      +inputField[1].value === +"" ||
+      +inputField[2].value === +"" ||
+      +inputField[3].value === +"" ||
+      +inputField[4].value === +"" ||
+      +inputField[5].value === +""
     ) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
     } else if (totalScore > 12) {
