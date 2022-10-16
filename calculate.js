@@ -124,10 +124,10 @@ selector("#calculateScoreButton").addEventListener(
   function calculateScore() {
     if (inputField.some((input) => +input.value === +"")) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
-    } else if (totalScore > 12) {
-      totalScore = 12;
-    } else if (totalScore < -12) {
-      totalScore = -12;
+    } else if (totalScore > inputField.length * 2) {
+      totalScore = inputField.length * 2;
+    } else if (totalScore < inputField.length * -2) {
+      totalScore = inputField.length * -2;
     }
 
     let passFail = totalScore > 0 ? "Passed" : "Failed";
