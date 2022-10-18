@@ -31,90 +31,86 @@ function displayHintText(docSelector, hintHelp) {
   }
 }
 
-const inputField = [
-  selector("#maxInput"),
-  selector("#minInput"),
-  selector("#rangeInput"),
-  selector("#sumInput"),
-  selector("#avgInput"),
-  selector("#medianInput"),
+//prettier-ignore
+const questions = [
+  { inputField: selector("#maxInput"), answerDisplay: selector("#maxAnswer") },
+  { inputField: selector("#minInput"), answerDisplay: selector("#minAnswer") },
+  { inputField: selector("#rangeInput"), answerDisplay: selector("#rangeAnswer") },
+  { inputField: selector("#sumInput"), answerDisplay: selector("#sumAnswer") },
+  { inputField: selector("#avgInput"), answerDisplay: selector("#avgAnswer") },
+  { inputField: selector("#medianInput"), answerDisplay: selector("#medianAnswer") }
 ];
 
-const maximumAnswer = selector("#maxAnswer");
-const minimumAnswer = selector("#minAnswer");
-const rangeAnswer = selector("#rangeAnswer");
-const sumAnswer = selector("#sumAnswer");
-const averageAnswer = selector("#avgAnswer");
-const medianAnswer = selector("#medianAnswer");
-
+//prettier-ignore
 selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
-  answerCheck(inputField[0].value, 9, maximumAnswer, 2, -1);
+  answerCheck(questions[0].inputField.value, 9, questions[0].answerDisplay, 2, -1);
 });
 
 selector("#maxHintButton").addEventListener("click", function maxHint() {
   displayHintText(
-    maximumAnswer,
+    questions[0].answerDisplay,
     "Maximum of a series of numbers is the largest number in that series"
   );
 });
 
+//prettier-ignore
 selector("#minButton").addEventListener("click", function minPracticeProblem() {
-  answerCheck(inputField[1].value, 2, minimumAnswer, 2, -1);
+  answerCheck(questions[1].inputField.value, 2, questions[1].answerDisplay, 2, -1);
 });
 
 selector("#minHintButton").addEventListener("click", function minHint() {
   displayHintText(
-    minimumAnswer,
+    questions[1].answerDisplay,
     "Minimum of a series of numbers is the smallest number in that series"
   );
 });
 
-selector("#rangeButton").addEventListener(
-  "click",
-  function rangePracticeProblem() {
-    answerCheck(inputField[2].value, 7, rangeAnswer, 2, -1);
+//prettier-ignore
+selector("#rangeButton").addEventListener("click", function rangePracticeProblem() {
+    answerCheck(questions[2].inputField.value, 7, questions[2].answerDisplay, 2, -1);
   }
 );
 
 selector("#rangeHintButton").addEventListener("click", function rangeHint() {
   displayHintText(
-    rangeAnswer,
+    questions[2].inputField.value,
     "Range is the maximum number minus the minimum number of a series of numbers"
   );
 });
 
+//prettier-ignore
 selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
-  answerCheck(inputField[3].value, 20, sumAnswer, 2, -1);
+  answerCheck(questions[3].inputField.value, 20, questions[3].answerDisplay, 2, -1);
 });
 
 selector("#sumHintButton").addEventListener("click", function sumHint() {
   displayHintText(
-    sumAnswer,
+    questions[3].answerDisplay,
     "Sum is the total of every number in the series of numbers added together"
   );
 });
 
+//prettier-ignore
 selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
-  answerCheck(inputField[4].value, 5, averageAnswer, 2, -1);
+  answerCheck(questions[4].inputField.value, 5, questions[4].answerDisplay, 2, -1);
 });
 
 selector("#avgHintButton").addEventListener("click", function avgHint() {
   displayHintText(
-    avgAnswer,
+    questions[4].answerDisplay,
     "Average is the sum divided by the number of numbers in the series of numbers"
   );
 });
 
-selector("#medianButton").addEventListener(
-  "click",
-  function medianPracticeProblem() {
-    answerCheck(inputField[5].value, 4.5, medianAnswer, 2, -1);
+//prettier-ignore
+selector("#medianButton").addEventListener("click", function medianPracticeProblem() {
+    answerCheck(questions[5].inputField.value, 4.5, questions[5].answerDisplay, 2, 1);
   }
 );
 
 selector("#medianHintButton").addEventListener("click", function medianHint() {
   displayHintText(
-    medianAnswer,
+    questions[5].answerDisplay,
     "Median is the middle number of a series of numbers sorted from minimum to maximum. If series of numbers is even take the 2 most middle numbers, add them together and divide them by 2."
   );
 });
@@ -122,12 +118,12 @@ selector("#medianHintButton").addEventListener("click", function medianHint() {
 selector("#calculateScoreButton").addEventListener(
   "click",
   function calculateScore() {
-    if (inputField.some((input) => +input.value === +"")) {
+    if (questions.some((input) => +input.inputField.value === +"")) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
-    } else if (totalScore > inputField.length * 2) {
-      totalScore = inputField.length * 2;
-    } else if (totalScore < inputField.length * -2) {
-      totalScore = inputField.length * -2;
+    } else if (totalScore > questions.length * 2) {
+      totalScore = questions.length * 2;
+    } else if (totalScore < questions.length * -2) {
+      totalScore = questions.length * -2;
     }
 
     let passFail = totalScore > 0 ? "Passed" : "Failed";
