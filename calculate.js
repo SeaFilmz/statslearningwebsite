@@ -33,16 +33,16 @@ function displayHintText(docSelector, hintHelp) {
 
 //prettier-ignore
 const questions = [
-  { inputField: selector("#maxInput"), correctAnswer: 9, answerDisplay: selector("#maxAnswer") },
-  { inputField: selector("#minInput"), correctAnswer: 2, answerDisplay: selector("#minAnswer") },
-  { inputField: selector("#rangeInput"), correctAnswer: 7, answerDisplay: selector("#rangeAnswer") },
-  { inputField: selector("#sumInput"), correctAnswer: 20, answerDisplay: selector("#sumAnswer") },
-  { inputField: selector("#avgInput"), correctAnswer: 5, answerDisplay: selector("#avgAnswer") },
-  { inputField: selector("#medianInput"), correctAnswer: 4.5, answerDisplay: selector("#medianAnswer") }
+  { answerButton: selector("#maxButton"),inputField: selector("#maxInput"), correctAnswer: 9, answerDisplay: selector("#maxAnswer") },
+  { answerButton: selector("#minButton"), inputField: selector("#minInput"), correctAnswer: 2, answerDisplay: selector("#minAnswer") },
+  { answerButton: selector("#rangeButton"), inputField: selector("#rangeInput"), correctAnswer: 7, answerDisplay: selector("#rangeAnswer") },
+  { answerButton: selector("#sumButton"), inputField: selector("#sumInput"), correctAnswer: 20, answerDisplay: selector("#sumAnswer") },
+  { answerButton: selector("#avgButton"), inputField: selector("#avgInput"), correctAnswer: 5, answerDisplay: selector("#avgAnswer") },
+  { answerButton: selector("#medianButton"), inputField: selector("#medianInput"), correctAnswer: 4.5, answerDisplay: selector("#medianAnswer") }
 ];
 
 //prettier-ignore
-selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
+questions[0].answerButton.addEventListener("click", function maxPracticeProblem() {
   answerCheck(questions[0].inputField.value, questions[0].correctAnswer, questions[0].answerDisplay);
 });
 
@@ -54,7 +54,7 @@ selector("#maxHintButton").addEventListener("click", function maxHint() {
 });
 
 //prettier-ignore
-selector("#minButton").addEventListener("click", function minPracticeProblem() {
+questions[1].answerButton.addEventListener("click", function minPracticeProblem() {
   answerCheck(questions[1].inputField.value, questions[1].correctAnswer, questions[1].answerDisplay);
 });
 
@@ -66,7 +66,7 @@ selector("#minHintButton").addEventListener("click", function minHint() {
 });
 
 //prettier-ignore
-selector("#rangeButton").addEventListener("click", function rangePracticeProblem() {
+questions[2].answerButton.addEventListener("click", function rangePracticeProblem() {
     answerCheck(questions[2].inputField.value, questions[2].correctAnswer, questions[2].answerDisplay);
   }
 );
@@ -79,7 +79,7 @@ selector("#rangeHintButton").addEventListener("click", function rangeHint() {
 });
 
 //prettier-ignore
-selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
+questions[3].answerButton.addEventListener("click", function sumPracticeProblem() {
   answerCheck(questions[3].inputField.value, questions[3].correctAnswer, questions[3].answerDisplay);
 });
 
@@ -91,7 +91,7 @@ selector("#sumHintButton").addEventListener("click", function sumHint() {
 });
 
 //prettier-ignore
-selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
+questions[4].answerButton.addEventListener("click", function avgPracticeProblem() {
   answerCheck(questions[4].inputField.value, questions[4].correctAnswer, questions[4].answerDisplay);
 });
 
@@ -103,7 +103,7 @@ selector("#avgHintButton").addEventListener("click", function avgHint() {
 });
 
 //prettier-ignore
-selector("#medianButton").addEventListener("click", function medianPracticeProblem() {
+questions[5].answerButton.addEventListener("click", function medianPracticeProblem() {
     answerCheck(questions[5].inputField.value, questions[5].correctAnswer, questions[5].answerDisplay);
   }
 );
