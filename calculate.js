@@ -33,17 +33,17 @@ function displayHintText(docSelector, hintHelp) {
 
 //prettier-ignore
 const questions = [
-  { inputField: selector("#maxInput"), answerDisplay: selector("#maxAnswer") },
-  { inputField: selector("#minInput"), answerDisplay: selector("#minAnswer") },
-  { inputField: selector("#rangeInput"), answerDisplay: selector("#rangeAnswer") },
-  { inputField: selector("#sumInput"), answerDisplay: selector("#sumAnswer") },
-  { inputField: selector("#avgInput"), answerDisplay: selector("#avgAnswer") },
-  { inputField: selector("#medianInput"), answerDisplay: selector("#medianAnswer") }
+  { inputField: selector("#maxInput"), correctAnswer: 9, answerDisplay: selector("#maxAnswer") },
+  { inputField: selector("#minInput"), correctAnswer: 2, answerDisplay: selector("#minAnswer") },
+  { inputField: selector("#rangeInput"), correctAnswer: 7, answerDisplay: selector("#rangeAnswer") },
+  { inputField: selector("#sumInput"), correctAnswer: 20, answerDisplay: selector("#sumAnswer") },
+  { inputField: selector("#avgInput"), correctAnswer: 5, answerDisplay: selector("#avgAnswer") },
+  { inputField: selector("#medianInput"), correctAnswer: 4.5, Display: selector("#medianAnswer") }
 ];
 
 //prettier-ignore
 selector("#maxButton").addEventListener("click", function maxPracticeProblem() {
-  answerCheck(questions[0].inputField.value, 9, questions[0].answerDisplay, 2, -1);
+  answerCheck(questions[0].inputField.value, questions[0].correctAnswer, questions[0].answerDisplay, 2, -1);
 });
 
 selector("#maxHintButton").addEventListener("click", function maxHint() {
@@ -55,7 +55,7 @@ selector("#maxHintButton").addEventListener("click", function maxHint() {
 
 //prettier-ignore
 selector("#minButton").addEventListener("click", function minPracticeProblem() {
-  answerCheck(questions[1].inputField.value, 2, questions[1].answerDisplay, 2, -1);
+  answerCheck(questions[1].inputField.value, questions[1].correctAnswer, questions[1].answerDisplay, 2, -1);
 });
 
 selector("#minHintButton").addEventListener("click", function minHint() {
@@ -67,7 +67,7 @@ selector("#minHintButton").addEventListener("click", function minHint() {
 
 //prettier-ignore
 selector("#rangeButton").addEventListener("click", function rangePracticeProblem() {
-    answerCheck(questions[2].inputField.value, 7, questions[2].answerDisplay, 2, -1);
+    answerCheck(questions[2].inputField.value, questions[2].correctAnswer, questions[2].answerDisplay, 2, -1);
   }
 );
 
@@ -80,7 +80,7 @@ selector("#rangeHintButton").addEventListener("click", function rangeHint() {
 
 //prettier-ignore
 selector("#sumButton").addEventListener("click", function sumPracticeProblem() {
-  answerCheck(questions[3].inputField.value, 20, questions[3].answerDisplay, 2, -1);
+  answerCheck(questions[3].inputField.value, questions[3].correctAnswer, questions[3].answerDisplay, 2, -1);
 });
 
 selector("#sumHintButton").addEventListener("click", function sumHint() {
@@ -92,7 +92,7 @@ selector("#sumHintButton").addEventListener("click", function sumHint() {
 
 //prettier-ignore
 selector("#avgButton").addEventListener("click", function avgPracticeProblem() {
-  answerCheck(questions[4].inputField.value, 5, questions[4].answerDisplay, 2, -1);
+  answerCheck(questions[4].inputField.value, questions[4].correctAnswer, questions[4].answerDisplay, 2, -1);
 });
 
 selector("#avgHintButton").addEventListener("click", function avgHint() {
@@ -104,7 +104,7 @@ selector("#avgHintButton").addEventListener("click", function avgHint() {
 
 //prettier-ignore
 selector("#medianButton").addEventListener("click", function medianPracticeProblem() {
-    answerCheck(questions[5].inputField.value, 4.5, questions[5].answerDisplay, 2, 1);
+    answerCheck(questions[5].inputField.value, questions[5].correctAnswer, questions[5].answerDisplay, 2, 1);
   }
 );
 
