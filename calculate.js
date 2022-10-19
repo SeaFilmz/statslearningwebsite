@@ -38,7 +38,7 @@ const questions = [
   { inputField: selector("#rangeInput"), correctAnswer: 7, answerDisplay: selector("#rangeAnswer") },
   { inputField: selector("#sumInput"), correctAnswer: 20, answerDisplay: selector("#sumAnswer") },
   { inputField: selector("#avgInput"), correctAnswer: 5, answerDisplay: selector("#avgAnswer") },
-  { inputField: selector("#medianInput"), correctAnswer: 4.5, Display: selector("#medianAnswer") }
+  { inputField: selector("#medianInput"), correctAnswer: 4.5, answerDisplay: selector("#medianAnswer") }
 ];
 
 //prettier-ignore
