@@ -43,7 +43,7 @@ const questions = [
 
 //prettier-ignore
 for(let i = 0; i < 6; i++) {
-  questions[i].answerButton.addEventListener("click", function maxPracticeProblem() {
+  questions[i].answerButton.addEventListener("click", function practiceProblems() {
     answerCheck(questions[i].inputField.value, questions[i].correctAnswer, questions[i].answerDisplay);
   });
 }
