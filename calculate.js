@@ -42,20 +42,17 @@ const questions = [
 ];
 
 //prettier-ignore
-questions[0].answerButton.addEventListener("click", function maxPracticeProblem() {
-  answerCheck(questions[0].inputField.value, questions[0].correctAnswer, questions[0].answerDisplay);
-});
+for(let i = 0; i < 6; i++) {
+  questions[i].answerButton.addEventListener("click", function maxPracticeProblem() {
+    answerCheck(questions[i].inputField.value, questions[i].correctAnswer, questions[i].answerDisplay);
+  });
+}
 
 selector("#maxHintButton").addEventListener("click", function maxHint() {
   displayHintText(
     questions[0].answerDisplay,
     "Maximum of a series of numbers is the largest number in that series"
   );
-});
-
-//prettier-ignore
-questions[1].answerButton.addEventListener("click", function minPracticeProblem() {
-  answerCheck(questions[1].inputField.value, questions[1].correctAnswer, questions[1].answerDisplay);
 });
 
 selector("#minHintButton").addEventListener("click", function minHint() {
@@ -65,22 +62,11 @@ selector("#minHintButton").addEventListener("click", function minHint() {
   );
 });
 
-//prettier-ignore
-questions[2].answerButton.addEventListener("click", function rangePracticeProblem() {
-    answerCheck(questions[2].inputField.value, questions[2].correctAnswer, questions[2].answerDisplay);
-  }
-);
-
 selector("#rangeHintButton").addEventListener("click", function rangeHint() {
   displayHintText(
     questions[2].inputField.value,
     "Range is the maximum number minus the minimum number of a series of numbers"
   );
-});
-
-//prettier-ignore
-questions[3].answerButton.addEventListener("click", function sumPracticeProblem() {
-  answerCheck(questions[3].inputField.value, questions[3].correctAnswer, questions[3].answerDisplay);
 });
 
 selector("#sumHintButton").addEventListener("click", function sumHint() {
@@ -90,23 +76,12 @@ selector("#sumHintButton").addEventListener("click", function sumHint() {
   );
 });
 
-//prettier-ignore
-questions[4].answerButton.addEventListener("click", function avgPracticeProblem() {
-  answerCheck(questions[4].inputField.value, questions[4].correctAnswer, questions[4].answerDisplay);
-});
-
 selector("#avgHintButton").addEventListener("click", function avgHint() {
   displayHintText(
     questions[4].answerDisplay,
     "Average is the sum divided by the number of numbers in the series of numbers"
   );
 });
-
-//prettier-ignore
-questions[5].answerButton.addEventListener("click", function medianPracticeProblem() {
-    answerCheck(questions[5].inputField.value, questions[5].correctAnswer, questions[5].answerDisplay);
-  }
-);
 
 selector("#medianHintButton").addEventListener("click", function medianHint() {
   displayHintText(
