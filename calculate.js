@@ -48,29 +48,11 @@ for(let i = 0; i < 6; i++) {
   });
 }
 
-questions[0].hintButton.addEventListener("click", function maxHint() {
-  displayHintText(questions[0].answerDisplay, questions[0].hintText);
-});
-
-questions[1].hintButton.addEventListener("click", function minHint() {
-  displayHintText(questions[1].answerDisplay, questions[1].hintText);
-});
-
-questions[2].hintButton.addEventListener("click", function rangeHint() {
-  displayHintText(questions[2].answerDisplay, questions[2].hintText);
-});
-
-questions[3].hintButton.addEventListener("click", function sumHint() {
-  displayHintText(questions[3].answerDisplay, questions[3].hintText);
-});
-
-questions[4].hintButton.addEventListener("click", function avgHint() {
-  displayHintText(questions[4].answerDisplay, questions[4].hintText);
-});
-
-questions[5].hintButton.addEventListener("click", function medianHint() {
-  displayHintText(questions[5].answerDisplay, questions[5].hintText);
-});
+for (let i = 0; i < 6; i++) {
+  questions[i].hintButton.addEventListener("click", function hint() {
+    displayHintText(questions[i].answerDisplay, questions[i].hintText);
+  });
+}
 
 selector("#calculateScoreButton").addEventListener(
   "click",
