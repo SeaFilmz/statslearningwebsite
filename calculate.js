@@ -35,10 +35,10 @@ function displayHintText(docSelector, hintHelp) {
 const questions = [
   { answerButton: selector("#maxButton"),inputField: selector("#maxInput"), correctAnswer: 9, answerDisplay: selector("#maxAnswer") },
   { answerButton: selector("#minButton"), inputField: selector("#minInput"), correctAnswer: 2, answerDisplay: selector("#minAnswer") },
-  { answerButton: selector("#rangeButton"), inputField: selector("#rangeInput"), correctAnswer: 7, answerDisplay: selector("#rangeAnswer") },
-  { answerButton: selector("#sumButton"), inputField: selector("#sumInput"), correctAnswer: 20, answerDisplay: selector("#sumAnswer") },
-  { answerButton: selector("#avgButton"), inputField: selector("#avgInput"), correctAnswer: 5, answerDisplay: selector("#avgAnswer") },
-  { answerButton: selector("#medianButton"), inputField: selector("#medianInput"), correctAnswer: 4.5, answerDisplay: selector("#medianAnswer") }
+  { answerButton: selector("#rangeButton"), inputField: selector("#rangeInput"), correctAnswer: 9-2, answerDisplay: selector("#rangeAnswer") },
+  { answerButton: selector("#sumButton"), inputField: selector("#sumInput"), correctAnswer: 3+9+6+2, answerDisplay: selector("#sumAnswer") },
+  { answerButton: selector("#avgButton"), inputField: selector("#avgInput"), correctAnswer: 20/4, answerDisplay: selector("#avgAnswer") },
+  { answerButton: selector("#medianButton"), inputField: selector("#medianInput"), correctAnswer: (6+3)/2, answerDisplay: selector("#medianAnswer") }
 ];
 
 //prettier-ignore
