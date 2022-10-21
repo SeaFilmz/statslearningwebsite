@@ -31,9 +31,12 @@ function displayHintText(docSelector, hintHelp) {
   }
 }
 
-const sum = 3 + 9 + 6 + 2;
-
 const numArray = [3, 9, 6, 2];
+
+//prettier-ignore
+const sum = numArray.reduce(
+  (previousValue, currentValue) => previousValue + currentValue, 0
+);
 
 //prettier-ignore
 const questions = [
