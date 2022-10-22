@@ -7,12 +7,14 @@ const totalScoreEl = selector("#score");
 let totalScore = 0;
 
 function answerCheck(input, number, answer) {
+  if (+input === +"") {
+    answer.innerHTML = `<div>Please Answer Problem</div>`;
+  }
+
   if (+input === number) {
     answer.innerHTML = `<div>Correct</div><div>Score: 2</div>`;
     totalScore = totalScore + 2;
     console.log(`input === number`, totalScore);
-  } else if (+input === +"") {
-    answer.innerHTML = `<div>Please Answer Problem</div>`;
   } else {
     answer.innerHTML = `<div>Wrong</div><div>Score: -1</div>`;
     totalScore = totalScore - 1;
