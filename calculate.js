@@ -115,7 +115,9 @@ selector("#calculateScoreButton").addEventListener(
   function calculateScore() {
     if (questions.some((input) => +input.inputField.value === +"")) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
-    } else if (totalScore > questions.length * 2) {
+    }
+
+    if (totalScore > questions.length * 2) {
       totalScore = questions.length * 2;
     } else if (totalScore < questions.length * -2) {
       totalScore = questions.length * -2;
