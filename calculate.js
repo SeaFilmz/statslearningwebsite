@@ -40,14 +40,61 @@ const sum = numArray.reduce(
   (previousValue, currentValue) => previousValue + currentValue, 0
 );
 
-//prettier-ignore
 const questions = [
-  { answerButton: selector("#maxButton"),inputField: selector("#maxInput"), correctAnswer: Math.max(...numArray), answerDisplay: selector("#maxAnswer"), hintButton: selector("#maxHintButton"), hintText: "Maximum of a series of numbers is the largest number in that series" },
-  { answerButton: selector("#minButton"), inputField: selector("#minInput"), correctAnswer: Math.min(...numArray), answerDisplay: selector("#minAnswer"), hintButton: selector("#minHintButton"), hintText: "Minimum of a series of numbers is the smallest number in that series" },
-  { answerButton: selector("#rangeButton"), inputField: selector("#rangeInput"), correctAnswer: Math.max(...numArray)-Math.min(...numArray), answerDisplay: selector("#rangeAnswer"), hintButton: selector("#rangeHintButton"), hintText: "Range is the maximum number minus the minimum number of a series of numbers" },
-  { answerButton: selector("#sumButton"), inputField: selector("#sumInput"), correctAnswer: sum, answerDisplay: selector("#sumAnswer"), hintButton: selector("#sumHintButton"), hintText: "Sum is the total of every number in the series of numbers added together"},
-  { answerButton: selector("#avgButton"), inputField: selector("#avgInput"), correctAnswer: sum/numArray.length, answerDisplay: selector("#avgAnswer"), hintButton: selector("#avgHintButton"), hintText: "Average is the sum divided by the number of numbers in the series of numbers" },
-  { answerButton: selector("#medianButton"), inputField: selector("#medianInput"), correctAnswer: (6+3)/2, answerDisplay: selector("#medianAnswer"), hintButton: selector("#medianHintButton"), hintText: "Median is the middle number of a series of numbers sorted from minimum to maximum. If series of numbers is even take the 2 most middle numbers, add them together and divide them by 2." }
+  {
+    answerButton: selector("#maxButton"),
+    inputField: selector("#maxInput"),
+    correctAnswer: Math.max(...numArray),
+    answerDisplay: selector("#maxAnswer"),
+    hintButton: selector("#maxHintButton"),
+    hintText:
+      "Maximum of a series of numbers is the largest number in that series",
+  },
+  {
+    answerButton: selector("#minButton"),
+    inputField: selector("#minInput"),
+    correctAnswer: Math.min(...numArray),
+    answerDisplay: selector("#minAnswer"),
+    hintButton: selector("#minHintButton"),
+    hintText:
+      "Minimum of a series of numbers is the smallest number in that series",
+  },
+  {
+    answerButton: selector("#rangeButton"),
+    inputField: selector("#rangeInput"),
+    correctAnswer: Math.max(...numArray) - Math.min(...numArray),
+    answerDisplay: selector("#rangeAnswer"),
+    hintButton: selector("#rangeHintButton"),
+    hintText:
+      "Range is the maximum number minus the minimum number of a series of numbers",
+  },
+  {
+    answerButton: selector("#sumButton"),
+    inputField: selector("#sumInput"),
+    correctAnswer: sum,
+    answerDisplay: selector("#sumAnswer"),
+    hintButton: selector("#sumHintButton"),
+    hintText:
+      "Sum is the total of every number in the series of numbers added together",
+  },
+  {
+    answerButton: selector("#avgButton"),
+    inputField: selector("#avgInput"),
+    correctAnswer: sum / numArray.length,
+    answerDisplay: selector("#avgAnswer"),
+    hintButton: selector("#avgHintButton"),
+    hintText:
+      "Average is the sum divided by the number of numbers in the series of numbers",
+  },
+  {
+    answerButton: selector("#medianButton"),
+    inputField: selector("#medianInput"),
+    correctAnswer: (6 + 3) / 2,
+    answerDisplay: selector("#medianAnswer"),
+    hintButton: selector("#medianHintButton"),
+    hintText:
+      "Median is the middle number of a series of numbers sorted from minimum to maximum. If series of numbers is even take the 2 most middle numbers, add them together and divide them by 2.",
+  },
 ];
 
 //prettier-ignore
