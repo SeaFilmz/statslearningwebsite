@@ -6,6 +6,8 @@ const totalScoreEl = selector("#score");
 
 let totalScore = 0;
 
+let totalAdditionScore = 0;
+
 function answerCheck(input, number, answer) {
   if (+input === +"") {
     answer.innerHTML = `<div>Please Answer Problem</div>`;
@@ -14,10 +16,12 @@ function answerCheck(input, number, answer) {
   if (+input === number) {
     answer.innerHTML = `<div>Correct</div><div>Score: 2</div>`;
     totalScore = totalScore + 2;
+    totalAdditionScore = totalAdditionScore + 2;
     console.log(`input === number`, totalScore);
   } else {
     answer.innerHTML = `<div>Wrong</div><div>Score: -1</div>`;
     totalScore = totalScore - 1;
+    totalAdditionScore = totalAdditionScore - 1;
     console.log(`else`, totalScore);
   }
 }
@@ -126,5 +130,54 @@ selector("#calculateScoreButton").addEventListener(
     let passFail = totalScore > 0 ? "Passed" : "Failed";
 
     return (totalScoreEl.innerHTML = `You ${passFail}! Score: ${totalScore}`);
+  }
+);
+
+const totalAdditionScoreEl = selector("#addScore");
+
+const additionQuestions = [
+  {
+    answerButton: selector("#add1Button"),
+    inputField: selector("#add1Input"),
+    correctAnswer: 1 + 1,
+    answerDisplay: selector("#add1Answer"),
+    /*hintButton: selector("#maxHintButton"),
+    hintText:
+      "Maximum of a series of numbers is the largest number in that series",*/
+  },
+  {
+    answerButton: selector("#add2Button"),
+    inputField: selector("#add2Input"),
+    correctAnswer: 1 + 2,
+    answerDisplay: selector("#add2Answer"),
+    /*hintButton: selector("#minHintButton"),
+    hintText:
+      "Minimum of a series of numbers is the smallest number in that series",*/
+  },
+];
+
+//prettier-ignore
+for(let i = 0; i < 2; i++) {
+  additionQuestions[i].answerButton.addEventListener("click", function practiceProblems() {
+    answerCheck(additionQuestions[i].inputField.value, additionQuestions[i].correctAnswer, additionQuestions[i].answerDisplay);
+  });
+}
+
+selector("#calculateAddScoreButton").addEventListener(
+  "click",
+  function calculateAdditionScore() {
+    if (additionQuestions.some((input) => +input.inputField.value === +"")) {
+      return (totalAdditionScoreEl.innerHTML = `Please Answer All Problems`);
+    }
+
+    if (totalAdditionScore > additionQuestions.length * 2) {
+      totalAdditionScore = additionQuestions.length * 2;
+    } else if (totalAdditionScore < additionQuestions.length * -2) {
+      totalAdditionScore = additionQuestions.length * -2;
+    }
+
+    let passedFailed = totalAdditionScore > 0 ? "Passed" : "Failed";
+
+    return (totalAdditionScoreEl.innerHTML = `You ${passedFailed}! Score: ${totalAdditionScore}`);
   }
 );
