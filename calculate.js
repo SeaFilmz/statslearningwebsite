@@ -117,7 +117,7 @@ for (let i = 0; i < 6; i++) {
 selector("#calculateScoreButton").addEventListener(
   "click",
   function calculateScore() {
-    if (questions.some((input) => +input.inputField.value === +"")) {
+    if (questions.some((input) => input.inputField.value === "")) {
       return (totalScoreEl.innerHTML = `Please Answer All Problems`);
     }
 
@@ -193,7 +193,7 @@ for(let i = 0; i < 5; i++) {
 selector("#calculateAddScoreButton").addEventListener(
   "click",
   function calculateAdditionScore() {
-    if (additionQuestions.some((input) => +input.inputField.value === +"")) {
+    if (additionQuestions.some((input) => input.inputField.value === "")) {
       return (totalAdditionScoreEl.innerHTML = `Please Answer All Problems`);
     }
 
