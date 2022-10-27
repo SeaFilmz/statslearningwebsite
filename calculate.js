@@ -141,45 +141,30 @@ const additionQuestions = [
     inputField: selector("#add1Input"),
     correctAnswer: 1 + 1,
     answerDisplay: selector("#add1Answer"),
-    /*hintButton: selector("#maxHintButton"),
-    hintText:
-      "Maximum of a series of numbers is the largest number in that series",*/
   },
   {
     answerButton: selector("#add2Button"),
     inputField: selector("#add2Input"),
     correctAnswer: 1 + 2,
     answerDisplay: selector("#add2Answer"),
-    /*hintButton: selector("#minHintButton"),
-    hintText:
-      "Minimum of a series of numbers is the smallest number in that series",*/
   },
   {
     answerButton: selector("#add3Button"),
     inputField: selector("#add3Input"),
     correctAnswer: 1 + 3,
     answerDisplay: selector("#add3Answer"),
-    /*hintButton: selector("#rangeHintButton"),
-    hintText:
-      "Range is the maximum number minus the minimum number of a series of numbers",*/
   },
   {
     answerButton: selector("#add4Button"),
     inputField: selector("#add4Input"),
     correctAnswer: 1 + 4,
     answerDisplay: selector("#add4Answer"),
-    /*hintButton: selector("#sumHintButton"),
-    hintText:
-      "Sum is the total of every number in the series of numbers added together",*/
   },
   {
     answerButton: selector("#add5Button"),
     inputField: selector("#add5Input"),
     correctAnswer: 1 + 5,
     answerDisplay: selector("#add5Answer"),
-    /*hintButton: selector("#avgHintButton"),
-    hintText:
-      "Average is the sum divided by the number of numbers in the series of numbers",*/
   },
 ];
 
